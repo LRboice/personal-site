@@ -1,42 +1,388 @@
-#root {
-  max-width: 1280px;
+:root {
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --background: #ffffff;
+  --accent: #6366f1;
+  --border: #e5e5e5;
+  --max-width: 1200px;
+  --padding-x: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-primary);
+  background: var(--background);
+  line-height: 1.5;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.nav {
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 32px var(--padding-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0;
+}
+
+/* Page container - applies to all pages */
+.page-container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 var(--padding-x);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home page styles */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  align-items: center;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 560px;
+  text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Work page styles */
+.work-page h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.work-page p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 64px;
+  max-width: 680px;
+}
+
+/* About page styles */
+.about-page h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.about-page p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 680px;
+}
+
+.experience-section {
+  margin-top: 64px;
+}
+
+.experience-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.job-item {
+  margin-bottom: 48px;
+}
+
+.job-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.job-period {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.job-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Featured work styles */
+.featured-work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.work-preview {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+.work-item {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 32px;
+  border-radius: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.work-item:hover {
+  background-color: #f5f5f5;
+}
+
+.work-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.work-details {
+  text-align: left;
+}
+
+.work-details h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.work-details p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.work-meta {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.work-meta span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.work-meta span::after {
+  content: "→";
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.work-item:hover .work-meta span::after {
+  transform: translateX(4px);
+}
+
+/* Get in touch section */
+.contact-section {
+  margin-top: 64px;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.contact-links {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-links a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding-x: 24px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content {
+    padding: 48px 0;
+  }
+
+  .hero-section h1,
+  .work-page h1,
+  .about-page h1 {
+    font-size: 40px;
+  }
+
+  .hero-text,
+  .work-page p,
+  .about-page p {
+    font-size: 18px;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .home-page {
+    gap: 120px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  :root {
+    --padding-x: 16px;
+  }
+
+  .main-content {
+    padding: 32px 0;
+  }
+
+  .hero-section h1,
+  .work-page h1,
+  .about-page h1 {
+    font-size: 32px;
+  }
+
+  .home-page {
+    gap: 80px;
+  }
+
+  .nav-links {
+    gap: 24px;
   }
 }
 
-.card {
-  padding: 2em;
+.button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.button.github {
+  background-color: #333;
 }
+
+.button.linkedin {
+  background-color: #0077b5;
+}
+
+.button.github:hover {
+  background-color: #555;
+}
+
+.button.linkedin:hover {
+  background-color: #005582;
+}
+
