@@ -386,3 +386,17 @@ body {
   background-color: #005582;
 }
 
+.footer {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  background: var(--background);
+  padding: 32px var(--padding-x);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+

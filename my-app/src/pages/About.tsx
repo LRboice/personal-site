@@ -39,7 +39,7 @@ const About: React.FC = () => {
         <div className="contact-section" style={{ border: '1px solid #e0e0e0', borderRadius: '8px', padding: '16px', marginBottom: '16px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
           <h2>Get in Touch</h2>
           <div className="contact-links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/lrboice" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
             <a href="https://linkedin.com/in/lrboice" target="_blank" rel="noopener noreferrer">

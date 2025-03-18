@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
 import './App.css';
+import resume from './assets/LucasBoice-Resume.pdf';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="app">
         <header className="header">
           <nav className="nav">
-            <Link to="/" className="nav-name">Lucas</Link>
+            <Link to="/" className="nav-name">Lucas Boice</Link>
             <div className="nav-links">
               <Link to="/" className="nav-link">Home</Link>
               <Link to="/work" className="nav-link">Work</Link>
@@ -26,6 +27,15 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
+
+        <footer className="footer">
+          <div className="footer-links">
+            <a href="https://github.com/lrboice" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:LucasRBoice@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/lrboice" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={resume} download>Resume</a>
+          </div>
+        </footer>
       </div>
     </Router>
   );

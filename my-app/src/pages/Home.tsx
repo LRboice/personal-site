@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'; 
 
 const Home: React.FC = () => {
   return (
     <div className="page-container home-page">
       <section className="hero-section">
-        <h1>Hi, I'm Lucas.</h1>
+        <h1>Howdy, I'm Lucas!</h1>
         <p className="hero-text">
           I'm a software engineer focused on building exceptional digital experiences.
           Currently, I'm working on creating accessible, human-centered products.
@@ -38,7 +37,7 @@ const Home: React.FC = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> 
     </div>
   );
 };
