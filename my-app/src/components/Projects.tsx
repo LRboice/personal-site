@@ -18,7 +18,7 @@ const projectsData: Project[] = [
     projectType: "KSU", 
     description: "Mobile application to assist in day-to-day child care for new parents. Utilized React Native and Firebase for seamless user experience.",
     technologies: ["React Native","JavaScript", "Expo", "Firebase"],
-    imageUrl: "/GrapeVyne.png", 
+    imageUrl: `${import.meta.env.BASE_URL}GrapeVyne.png`, 
     year: "2024", 
     githubUrl: "https://github.com/ksu-cs-projects-2024-2025/fall-2024-LRboice/releases/tag/1.0.3"
   },
@@ -27,7 +27,7 @@ const projectsData: Project[] = [
     projectType: "KSU",
     description: "Dashboard for quick inventory queries and submissions with a minimalist UI. Optimized SQL queries for enhanced search functionality.",
     technologies: ["C#/.NET", "SQL"],
-    imageUrl: "/library.png",
+    imageUrl: `${import.meta.env.BASE_URL}library.png`,
     year: "2023", 
     githubUrl: "https://github.com/LRboice/CS560_Team19_Proj"
   },
@@ -36,7 +36,7 @@ const projectsData: Project[] = [
     projectType: "KSU",
     description: "A real-time auction system built with C#/.NET and Websockets. Allows users to bid on items and watch them live.",
     technologies: ["C#/.NET", "Websockets"],
-    imageUrl: "/auction.png",
+    imageUrl: `${import.meta.env.BASE_URL}auction.png`,
     year: "2023", 
     githubUrl: "https://github.com/sahuarolabs/fp-fall-2023-team4a.git"
   },
@@ -45,7 +45,7 @@ const projectsData: Project[] = [
     projectType: "KSU",
     description: "Point-of-Sale System for a fictional restaurant, designed for fast-paced environments with an accessible UI.",
     technologies: ["C#/.NET"],
-    imageUrl: "/TheFlyingSaucer.png",
+    imageUrl: `${import.meta.env.BASE_URL}TheFlyingSaucer.png`,
     year: "2023",  
     githubUrl: "https://github.com/ksu-cs/the-flying-saucer-LRboice/releases/tag/v.0.10.0"
   }

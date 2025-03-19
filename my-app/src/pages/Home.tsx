@@ -34,7 +34,11 @@ const Home: React.FC = () => {
           <div className="project-info">
             <div className="project-type">Current Role</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.75rem' }}>
-              <img src="/adaptive-icon.png" alt="Piclist.ai Adaptive Icon" style={{ width: '30px', height: '30px', objectFit: 'contain' }} />
+              <img 
+                src={`${import.meta.env.BASE_URL}adaptive-icon.png`}
+                alt="Piclist.ai Adaptive Icon" 
+                style={{ width: '30px', height: '30px', objectFit: 'contain' }} 
+              />
               <h3 style={{ margin: 0 }}>Piclist.ai</h3>
             </div>
             <p className="project-role">Full Stack Developer</p>
