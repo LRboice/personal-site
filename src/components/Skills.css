@@ -1,26 +1,23 @@
 .skills-section {
-  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   animation: fadeIn 0.5s ease-out;
 }
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
-  width: 100%;
 }
 
 .skill-category {
   background: white;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  width: 100%;
 }
 
 .skill-category:hover {
@@ -35,43 +32,30 @@
   border-bottom: 2px solid rgba(37, 99, 235, 0.1);
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-  gap: 1rem;
-  justify-items: center;
-  align-items: start;
-  width: 100%;
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
+  position: relative;
   transition: transform 0.2s ease;
-  width: 100%;
 }
 
 .skill-item:hover {
   transform: translateY(-5px);
 }
 
-.skill-icon {
+.skill-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 60px;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .skill-name {
-  font-size: 0.9rem;
   color: var(--text-color);
-  margin: 0;
-  word-wrap: break-word;
-  width: 100%;
+  font-weight: 500;
 }
 
 .skill-level {
@@ -123,38 +107,15 @@
 }
 
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 1rem;
+  }
+
   .skills-container {
     grid-template-columns: 1fr;
-    padding: 0.5rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .skill-icon svg {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .skill-name {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 0.5rem;
-  }
-
-  .skill-icon svg {
-    width: 35px !important;
-    height: 35px !important;
   }
 
   .skill-category {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 } 

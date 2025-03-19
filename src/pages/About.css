@@ -1,8 +1,7 @@
 .about-page {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .about-header {
@@ -17,20 +16,17 @@
 }
 
 .about-content {
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0 1rem;
 }
 
 .about-card {
-  width: 100%;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
@@ -39,30 +35,31 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1.5rem;
 }
 
 .education-content, .experience-content, .achievements-content {
   flex: 1;
-  min-width: 250px;
 }
 
 .education-logo {
-  width: 200px;
+  width: 300px;
   height: auto;
+  margin-left: 2rem;
   object-fit: contain;
 }
 
 .experience-logo {
-  width: 200px;
-  height: auto;
+  width: 400px;
+  height: auto;  
+  margin-top: 5rem;
   object-fit: contain;
 }
 
 .achievements-logo {
   width: 150px;
-  height: auto;
+  height: auto; 
+  margin-right: 8rem; 
+  margin-top: 1rem;
   object-fit: contain;
 }
 
@@ -214,22 +211,16 @@
 }
 
 .section-divider {
-  width: auto;
+  width: 100%;
+  max-width: 600px;
   height: 4px;
   background-color: #0077b5;
   margin: 0 auto 2rem auto;
   border-radius: 2px;
 }
-
-.about-header .section-divider {
-  width: 100%;
-  max-width: fit-content;
-  margin-top: -0.5rem;
-}
-
 @media (max-width: 768px) {
   .about-page {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .about-header h1 {
@@ -237,45 +228,10 @@
   }
 
   .about-content {
-    padding: 0 0.5rem;
-  }
-
-  .about-card {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .contact-links {
     flex-direction: column;
   }
-
-  .education-card, .experience-card, .achievements-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .education-content, .experience-content, .achievements-content {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .education-logo, .experience-logo, .achievements-logo {
-    width: 150px;
-    margin: 1rem 0;
-  }
 }
-
-@media (max-width: 480px) {
-  .about-content {
-    gap: 1rem;
-  }
-
-  .about-card {
-    padding: 0.75rem;
-  }
-
-  .education-logo, .experience-logo, .achievements-logo {
-    width: 120px;
-  }
-} 

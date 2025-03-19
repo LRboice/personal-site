@@ -151,7 +151,8 @@ body {
 }
 
 .section-divider {
-  width: auto;
+  width: 100%;
+  max-width: 600px;
   height: 4px;
   background-color: #0077b5;
   margin: 0 auto 2rem auto;
@@ -169,5 +170,5 @@ body {
 
   .hero-text {
     font-size: 1.1rem;
-  }
-} 
+  } 
+}

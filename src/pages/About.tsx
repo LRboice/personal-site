@@ -44,7 +44,7 @@ const About: React.FC = () => {
         <div className="section-divider"></div>
         <p style={{ 
           textAlign: 'center',
-          maxWidth: '600px',
+          maxWidth: 'auto',
           margin: '0 auto',
           color: 'var(--secondary-color)'
         }}>
