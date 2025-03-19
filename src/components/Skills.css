@@ -7,9 +7,10 @@
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .skill-category {
@@ -112,7 +113,8 @@
   }
 
   .skills-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.75rem;
   }
 
   .skill-category {
