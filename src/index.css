@@ -13,12 +13,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  background-image: 
-    radial-gradient(at 100% 0%, rgba(0, 119, 181, 0.15) 0, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(37, 99, 235, 0.15) 0, transparent 50%);
-  background-attachment: fixed;
-  min-height: 100vh;
 }
 
 code {
