@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import About from './pages/About';
+import Home from './pages/Home.tsx';
+import Work from './pages/Work.tsx';
+import About from './pages/About.tsx';
 import './App.css';
 import resume from './assets/LucasBoice-Resume.pdf';
 
