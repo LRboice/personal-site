@@ -41,13 +41,8 @@ const About: React.FC = () => {
     <div className="page-container about-page">
       <section className="about-header">
         <h1>About Me</h1>
-        <div className="section-divider"></div>
-        <p style={{ 
-          textAlign: 'center',
-          maxWidth: 'auto',
-          margin: '0 auto',
-          color: 'var(--secondary-color)'
-        }}>
+        <div className="section-divider"/> 
+        <p>
           I'm a software engineer passionate about creating elegant solutions to complex problems.
           My journey in tech has been driven by curiosity and a desire to build meaningful applications.
         </p>
