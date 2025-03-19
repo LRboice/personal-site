@@ -151,8 +151,7 @@ body {
 }
 
 .section-divider {
-  width: 100%;
-  max-width: 600px;
+  width: auto;
   height: 4px;
   background-color: #0077b5;
   margin: 0 auto 2rem auto;

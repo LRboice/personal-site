@@ -209,14 +209,21 @@
   background-color: var(--primary-color);
   color: #fff;
 }
+
 .section-divider {
-  width: 100%;
-  max-width: 600px;
+  width: auto;
   height: 4px;
   background-color: #0077b5;
   margin: 0 auto 2rem auto;
   border-radius: 2px;
 }
+
+.about-header .section-divider {
+  width: 100%;
+  max-width: fit-content;
+  margin-top: -0.5rem;
+}
+
 @media (max-width: 768px) {
   .about-page {
     padding: 1rem;
