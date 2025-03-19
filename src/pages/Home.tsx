@@ -23,13 +23,7 @@ const Home: React.FC = () => {
 
         
         <h1>Latest Work</h1>
-        <div style={{ 
-          width: '600px', 
-          height: '4px', 
-          backgroundColor: '#0077b5', 
-          margin: '0 auto 2rem auto', 
-          borderRadius: '2px' 
-        }}></div>
+        <div className="section-divider"></div>
         <div className="project-card">
           <div className="project-info">
             <div className="project-type">Current Role</div>

@@ -41,13 +41,7 @@ const About: React.FC = () => {
     <div className="page-container about-page">
       <section className="about-header">
         <h1>About Me</h1>
-        <div style={{ 
-          width: '600px', 
-          height: '4px', 
-          backgroundColor: '#0077b5', 
-          margin: '0 auto 2rem auto', 
-          borderRadius: '2px' 
-        }}></div>
+        <div className="section-divider"></div>
         <p style={{ 
           textAlign: 'center',
           maxWidth: '600px',

@@ -1,0 +1,56 @@
+.work-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.work-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.work-header p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+.skills-section {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+/* Inherit section-divider from Home.css */
+.section-divider {
+  width: 100%;
+  max-width: 600px;
+  height: 4px;
+  background-color: #0077b5;
+  margin: 0 auto 2rem auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .work-page {
+    padding: 1rem;
+  }
+
+  .work-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .work-header p {
+    font-size: 1.1rem;
+  }
+
+  .skills-section {
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+} 
