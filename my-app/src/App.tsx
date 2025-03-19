@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         <header className="header">
           <nav className="nav">
-            <Link to="/" className="nav-name">Lucas Boice</Link>
+            <h1 className="nav-name">Lucas Boice</h1>
             <div className="nav-links">
               <Link to="/" className="nav-link">Home</Link>
               <Link to="/work" className="nav-link">Work</Link>

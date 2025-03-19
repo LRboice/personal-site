@@ -1,17 +1,38 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './About.css';
 
 const About: React.FC = () => {
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.currentTarget, 'YOUR_USER_ID')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+    try {
+      const formData = new FormData(e.currentTarget);
+      formData.append('time', new Date().toLocaleString());
+
+      // Log the captured data
+      console.log('Captured Data:', {
+        from_name: formData.get('from_name'),
+        reply_to: formData.get('reply_to'),
+        message: formData.get('message'),
+        time: formData.get('time'),
       });
+
+      const result = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || '',
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
+        {
+          from_name: formData.get('from_name'),
+          reply_to: formData.get('reply_to'),
+          message: formData.get('message'),
+          time: formData.get('time'),
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || ''
+      );
+      console.log(result.text);
+    } catch (error: any) {
+      console.log(error.text);
+    }
 
     e.currentTarget.reset(); // Reset the form after submission
   };
@@ -101,9 +122,9 @@ const About: React.FC = () => {
           </div>
 
           <form className="contact-form" onSubmit={sendEmail}>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="text" name="from_name" placeholder="Your Name" required style={{ color: '#333' }} />
+            <input type="email" name="reply_to" placeholder="Your Email" required style={{ color: '#333' }} />
+            <textarea name="message" placeholder="Your Message" required style={{ color: '#333' }}></textarea>
             <button type="submit">Send Me A Message</button>
           </form>
         </div>
