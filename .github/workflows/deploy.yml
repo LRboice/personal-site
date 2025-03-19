@@ -26,18 +26,15 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: './my-app/package-lock.json'
 
       - name: Install dependencies
-        run: |
-          cd my-app
-          npm ci
+        working-directory: ./my-app
+        run: npm ci
 
       - name: Build
+        working-directory: ./my-app
         run: |
-          cd my-app
           npm run build
-          cp dist/index.html dist/404.html
           touch dist/.nojekyll
 
       - name: Upload artifact
