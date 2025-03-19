@@ -7,7 +7,7 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -88,6 +88,13 @@
   padding: 1.5rem;
 }
 
+.project-year {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
 .project-info h3 {
   color: var(--text-color);
   font-size: 1.25rem;
@@ -105,6 +112,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .tech-tag {
@@ -116,6 +124,123 @@
   font-weight: 500;
 }
 
+.read-more-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-dark);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-tech-tags {
+  margin: 1rem 0;
+}
+
+.modal-year {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.blog-link {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.blog-link:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-dark);
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-btn {
+  background-color: #24292e;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.github-btn:hover {
+  transform: scale(1.05);
+  background-color: #2f363d;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.github-link {
+  display: inline-block;
+  background-color: #24292e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.github-link:hover {
+  transform: scale(1.05);
+  background-color: #2f363d;
+}
+
 @media (max-width: 768px) {
   .projects-section {
     padding: 1rem;
@@ -123,14 +248,31 @@
 
   .projects-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-image {
     height: 180px;
   }
 
-  .project-links {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.5);
+  .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-buttons,
+  .modal-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .github-btn,
+  .github-link,
+  .read-more-btn,
+  .blog-link {
+    width: 100%;
+    text-align: center;
   }
 } 

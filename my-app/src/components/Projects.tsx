@@ -1,74 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
+ 
 
 interface Project {
   title: string;
+  projectType: string; 
   description: string;
   technologies: string[];
   imageUrl: string;
-  liveUrl?: string;
-  githubUrl?: string;
+  year: string; 
+  githubUrl?: string;  // Optional GitHub URL
 }
 
 const projectsData: Project[] = [
   {
-    title: "Personal Portfolio",
-    description: "A modern, responsive portfolio website built with React and TypeScript. Features smooth animations and a clean design.",
-    technologies: ["React", "TypeScript", "CSS"],
-    imageUrl: "/portfolio-preview.jpg",
-    githubUrl: "https://github.com/yourusername/personal-site"
+    title: "Childcare App",
+    projectType: "KSU", 
+    description: "Mobile application to assist in day-to-day child care for new parents. Utilized React Native and Firebase for seamless user experience.",
+    technologies: ["React Native","JavaScript", "Expo", "Firebase"],
+    imageUrl: "/GrapeVyne.png", 
+    year: "2024", 
+    githubUrl: "https://github.com/ksu-cs-projects-2024-2025/fall-2024-LRboice/releases/tag/1.0.3"
   },
   {
-    title: "Task Management App",
-    description: "Full-stack task management application with real-time updates, user authentication, and collaborative features.",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "WebSocket"],
-    imageUrl: "/task-app-preview.jpg",
-    liveUrl: "https://task-app.demo",
-    githubUrl: "https://github.com/yourusername/task-app"
+    title: "Library Database Search System",
+    projectType: "KSU",
+    description: "Dashboard for quick inventory queries and submissions with a minimalist UI. Optimized SQL queries for enhanced search functionality.",
+    technologies: ["C#/.NET", "SQL"],
+    imageUrl: "/library.png",
+    year: "2023", 
+    githubUrl: "https://github.com/LRboice/CS560_Team19_Proj"
   },
   {
-    title: "E-commerce Platform",
-    description: "Modern e-commerce platform with product management, shopping cart, and secure payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    imageUrl: "/ecommerce-preview.jpg",
-    liveUrl: "https://shop.demo",
-    githubUrl: "https://github.com/yourusername/ecommerce"
+    title: "Winforms/.NET Auction Service",
+    projectType: "KSU",
+    description: "A real-time auction system built with C#/.NET and Websockets. Allows users to bid on items and watch them live.",
+    technologies: ["C#/.NET", "Websockets"],
+    imageUrl: "/auction.png",
+    year: "2023", 
+    githubUrl: "https://github.com/sahuarolabs/fp-fall-2023-team4a.git"
+  },
+  {
+    title: "The Flying Saucer POS System",
+    projectType: "KSU",
+    description: "Point-of-Sale System for a fictional restaurant, designed for fast-paced environments with an accessible UI.",
+    technologies: ["C#/.NET"],
+    imageUrl: "/TheFlyingSaucer.png",
+    year: "2023",  
+    githubUrl: "https://github.com/ksu-cs/the-flying-saucer-LRboice/releases/tag/v.0.10.0"
   }
 ];
 
 const Projects: React.FC = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const openModal = (index: number) => {
+    setSelectedProject(projectsData[index]);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div className="projects-section">
-      <h2>Featured Projects</h2>
       <div className="projects-container">
         {projectsData.map((project, index) => (
           <div key={index} className="project-card">
             <div className="project-image">
               <img src={project.imageUrl} alt={project.title} />
-              <div className="project-links">
-                {project.liveUrl && (
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link live"
-                  >
-                    View Live
-                  </a>
-                )}
-                {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link github"
-                  >
-                    View Code
-                  </a>
-                )}
-              </div>
             </div>
             <div className="project-info">
+              <div className="project-type">{project.projectType}</div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-tech">
@@ -78,10 +81,50 @@ const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
+              <div className="project-buttons">
+                <button 
+                  className="read-more-btn"
+                  onClick={() => openModal(index)}
+                >
+                  Read More
+                </button>
+                {project.githubUrl && (
+                  <a 
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-btn"
+                  >
+                    View Code
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
       </div>
+
+      {selectedProject && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <h3>{selectedProject.title}</h3>
+            <p>{selectedProject.description}</p>
+            <div className="modal-tech-tags">
+              {selectedProject.technologies.map((tech, index) => (
+                <span key={index} className="tech-tag">{tech}</span>
+              ))}
+            </div>
+            <div className="modal-year">Year: {selectedProject.year}</div>
+            <div className="modal-buttons">
+              {selectedProject.githubUrl && (
+                <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
+                  View Code
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
