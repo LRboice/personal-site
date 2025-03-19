@@ -1,5 +1,5 @@
 {
-  "homepage": "https://lrboice.github.io/personal-site/",
+  "homepage": "https://lrboice.github.io/personal-site",
   "name": "my-app",
   "private": true,
   "version": "1.0.0",
@@ -8,9 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/personal-site/',
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: true
+  },
   define: {
     'process.env': {
       REACT_APP_EMAILJS_SERVICE_ID: JSON.stringify(process.env.REACT_APP_EMAILJS_SERVICE_ID),
