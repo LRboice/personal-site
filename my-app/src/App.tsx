@@ -3,6 +3,7 @@ import Home from './pages/Home.tsx';
 import Work from './pages/Work.tsx';
 import About from './pages/About.tsx';
 import './App.css';
+import React from 'react';
 import resume from './assets/LucasBoice-Resume.pdf';
 
 function App() {
