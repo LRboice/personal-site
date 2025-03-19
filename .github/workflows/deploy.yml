@@ -25,15 +25,31 @@ jobs:
         with:
           node-version: '20'
 
+      - name: List directory contents
+        run: ls -la
+
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm list vite react typescript @vitejs/plugin-react
+
+      - name: Check TypeScript configuration
+        run: |
+          echo "TypeScript Config:"
+          cat tsconfig.json
+          echo "Node TypeScript Config:"
+          cat tsconfig.node.json
 
       - name: Build
         env:
           REACT_APP_EMAILJS_SERVICE_ID: ${{ secrets.REACT_APP_EMAILJS_SERVICE_ID }}
           REACT_APP_EMAILJS_TEMPLATE_ID: ${{ secrets.REACT_APP_EMAILJS_TEMPLATE_ID }}
           REACT_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.REACT_APP_EMAILJS_PUBLIC_KEY }}
-        run: npm run build
+        run: |
+          echo "Starting build process..."
+          npm run build --verbose
+          echo "Build completed. Checking dist directory:"
+          ls -la dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
