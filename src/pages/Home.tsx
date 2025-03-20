@@ -8,8 +8,7 @@ const Home: React.FC = () => {
       <section className="hero-section">
         <h1>Howdy, I'm Lucas!</h1>
         <p className="hero-text">
-          I'm a software engineer focused on building exceptional digital experiences.
-          Currently, I'm working on creating accessible, human-centered products.
+          Full Stack Developer at piclist.ai, crafting innovative solutions to help businesses scale and succeed.
         </p>
 
         <div className="hero-buttons">

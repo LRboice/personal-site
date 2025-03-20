@@ -43,8 +43,10 @@ const About: React.FC = () => {
         <h1>About Me</h1>
         <div className="section-divider"/> 
         <p>
-          I'm a software engineer passionate about creating elegant solutions to complex problems.
-          My journey in tech has been driven by curiosity and a desire to build meaningful applications.
+          I've always enjoyed videogames, but I had long wanted to learn what went on under the hood.
+          That curiosity led me to pursue a degree in Computer Science at Kansas State University. 
+          Over time, designing andbuilding projects became much more fun than playing games. Now, I'm a proud engineer at piclist.ai, 
+          developing a service that empowers businesses to grow.
         </p>
       </section>
 
