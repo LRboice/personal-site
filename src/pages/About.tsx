@@ -45,7 +45,7 @@ const About: React.FC = () => {
         <p>
           I've always enjoyed videogames, but I had long wanted to learn what went on under the hood.
           That curiosity led me to pursue a degree in Computer Science at Kansas State University. 
-          Over time, designing andbuilding projects became much more fun than playing games. Now, I'm a proud engineer at piclist.ai, 
+          Over time, designing and building projects became much more fun than playing games. Now, I'm a proud engineer at piclist.ai, 
           developing a service that empowers businesses to grow.
         </p>
       </section>
