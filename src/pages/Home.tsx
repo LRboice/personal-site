@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <section className="hero-section">
         <div className="portrait-container">
           <img 
-            src={`${import.meta.env.BASE_URL}portrait.jpg`}
+            src="/assets/portrait.jpg"
             alt="Lucas Boice"
             className="portrait-image"
           />
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             <div className="project-type">Current Role</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.75rem' }}>
               <img 
-                src={`${import.meta.env.BASE_URL}adaptive-icon.png`}
+                src="/assets/adaptive-icon.png"
                 alt="Piclist.ai Adaptive Icon" 
                 style={{ width: '30px', height: '30px', objectFit: 'contain' }} 
               />

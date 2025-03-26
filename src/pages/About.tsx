@@ -42,7 +42,7 @@ const About: React.FC = () => {
       <section className="about-header">
         <div className="portrait-container">
           <img 
-            src={`${import.meta.env.BASE_URL}portrait.jpg`}
+            src="/portrait.jpg"
             alt="Lucas Boice"
             className="portrait-image"
           />
@@ -66,7 +66,7 @@ const About: React.FC = () => {
             <p>Aug. 2019 - Dec. 2024, Manhattan, KS</p>
           </div>
           <img 
-            src={`${import.meta.env.BASE_URL}ksuLogo.png`}
+            src="/ksuLogo.png"
             alt="Kansas State University Logo" 
             className="education-logo"
           />
@@ -84,7 +84,7 @@ const About: React.FC = () => {
             </ul>
           </div>
           <img 
-            src={`${import.meta.env.BASE_URL}adaptive-icon.png`}
+            src="/adaptive-icon.png"
             alt="Piclist.ai Logo" 
             className="experience-logo"
           />
@@ -96,7 +96,7 @@ const About: React.FC = () => {
             <p>Eagle Scout Earned 2016</p>
           </div>
           <img 
-            src={`${import.meta.env.BASE_URL}eagle.png`}
+            src="/eagle.png"
             alt="Eagle Scout Logo" 
             className="achievements-logo"
           />
