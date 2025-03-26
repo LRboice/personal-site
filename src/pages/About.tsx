@@ -1,7 +1,6 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import './About.css';
-import portrait from '../../dist/portrait.jpg';
+import './About.css'; 
 
 const About: React.FC = () => {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,7 +42,7 @@ const About: React.FC = () => {
       <section className="about-header">
         <div className="portrait-container">
           <img 
-            src={portrait}
+            src={`${import.meta.env.BASE_URL}portrait.jpg`}
             alt="Lucas Boice"
             className="portrait-image"
           />

@@ -1,7 +1,6 @@
 import React from 'react'; 
 import './Home.css';
-import '../components/Projects.css';  // Import Projects.css for consistent styling
-import portrait from '../../dist/portrait.jpg';
+import '../components/Projects.css';  // Import Projects.css for consistent styling 
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +8,7 @@ const Home: React.FC = () => {
       <section className="hero-section">
         <div className="portrait-container">
           <img 
-            src={portrait}
+            src={`${import.meta.env.BASE_URL}portrait.jpg`}
             alt="Lucas Boice"
             className="portrait-image"
           />
