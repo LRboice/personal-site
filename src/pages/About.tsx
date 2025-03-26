@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
 import './About.css';
+import portrait from '../../dist/portrait.jpg';
 
 const About: React.FC = () => {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -40,13 +41,20 @@ const About: React.FC = () => {
   return (
     <div className="page-container about-page">
       <section className="about-header">
+        <div className="portrait-container">
+          <img 
+            src={portrait}
+            alt="Lucas Boice"
+            className="portrait-image"
+          />
+        </div>
         <h1>About Me</h1>
         <div className="section-divider"/> 
         <p>
           I've always enjoyed videogames, but I had long wanted to learn what went on under the hood.
           That curiosity led me to pursue a degree in Computer Science at Kansas State University. 
           Over time, designing and building projects became much more fun than playing games. Now, I'm a proud engineer at piclist.ai, 
-          developing a service that empowers businesses to grow.
+          developing services that empower customers and their businesses to grow.
         </p>
       </section>
 

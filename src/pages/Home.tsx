@@ -1,11 +1,19 @@
 import React from 'react'; 
 import './Home.css';
 import '../components/Projects.css';  // Import Projects.css for consistent styling
+import portrait from '../../dist/portrait.jpg';
 
 const Home: React.FC = () => {
   return (
     <div className="page-container home-page">
       <section className="hero-section">
+        <div className="portrait-container">
+          <img 
+            src={portrait}
+            alt="Lucas Boice"
+            className="portrait-image"
+          />
+        </div>
         <h1>Howdy, I'm Lucas!</h1>
         <p className="hero-text">
           Full Stack Developer at piclist.ai, crafting innovative solutions to help businesses scale and succeed.
